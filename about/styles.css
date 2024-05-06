@@ -1,0 +1,144 @@
+@import url(../resources/css/styles.css);
+
+:root {
+    
+}
+
+/****************************************************************** ABOUT US ******************************************************************/
+
+.about-header {
+    min-height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../resources/_images/porto3.jpg);
+}
+
+.about-text-box {
+    width: 75%;
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about-text-box h1 {
+    font-size: 62px;
+}
+
+.about-text-box p {
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.about-us {
+    width: 90%;
+    margin: auto;
+    padding-block: 100px;
+}
+
+.about-us-row {
+    width: calc(100% - 10rem);
+    display: flex;
+    text-align: center;
+    height: 400px;
+    padding: 1rem 5rem;
+}
+
+.about-us-row-img-col {
+    width: 40%;
+    margin: auto;
+    border: 1px solid black;
+    height:400px;
+}
+
+.about-us-row-text-col {
+    width: 60%;
+    margin: auto;
+    padding: 1rem 4rem;
+    text-align: justify;
+    line-height: 1.75rem;
+}
+
+.about-employees {
+
+}
+
+.about-employees-header {
+    height: fit-content;
+    background-color: var(--light-background-color);
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.about-employees-title {
+
+}
+
+.about-employees-title-description {
+
+}
+
+.about-employees-team {
+    grid-gap: 2rem;
+    display: grid;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+@media (min-width: 62.001rem){
+    .about-employees-team {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media (min-width: 75.001rem){
+    .about-employees-team {
+        margin: 2rem auto;
+        width: 72rem;
+    }
+}
+
+.about-employees-card { 
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--light-background-color);
+}
+
+.about-employees-card-image {
+    height: 18rem;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.about-employees-card-info {
+    margin-block: 1.25rem;
+    padding-inline: 1.25rem;
+    
+}
+
+.about-employees-card-info-name {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.about-employees-card-info-role {
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+.about-employees-card-info-text {
+    font-weight: 300;
+    font-size: 1rem;
+}
