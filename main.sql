@@ -99,6 +99,7 @@ CREATE TABLE IF NOT EXISTS `language` (
   `code` varchar(50) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   `file_name` varchar(100) DEFAULT NULL,
+  `file_image` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Tabela com as linguagens disponíveis ao utilizador no site.';
 
