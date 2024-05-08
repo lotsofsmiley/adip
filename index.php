@@ -29,20 +29,21 @@ while ($row = mysqli_fetch_assoc($result2)) {
 }
 
 $language_file_name = './resources/view/languages/lang_eng.php';
+$language_image_src = './resources/_images/languages/en.jpg';
+
 
 if (isset($_SESSION['selected_language'])) {
     $selected_language = $_SESSION['selected_language'];
 
     foreach ($languages as $language) {
-        if ($language['language_code'] === $selected_language) {
+        if ($language['code'] === $selected_language) {
             $language_file_name = $language['file_name'];
-            $language_image_src = $language[''];
+            $language_image_src = $language['file_image'];
             break;
         }
     }
 }
 
-require_once "$language_file_name";
 ?>
 
 
@@ -79,72 +80,44 @@ require_once "$language_file_name";
 
 <body>
     <nav class="navbar" id="navbar">
-        <!--<a class="company-title noSelect" href="./?p=0">aDayinPorto</a>-->
         <div class="nav-logo-container">
             <img src="./resources/_images/full_nobg_logo.png" alt="aDayinDouro" class="logo-image noSelect">
         </div>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="closemenu()"></i>
             <ul id="menu">
-                <?php if (isset($_SESSION['permissions']) && in_array('BACKOFFICE_ACCESS', $_SESSION['permissions'])) { ?>
-                    <li class="nav-items menu-sub-item"><a class="noSelect" id="backoffice" href="./backoffice/index.php">BackOffice</a></li>
-                <?php } ?>
                 <li class="nav-items menu-sub-item"></li>
-                <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=0">HOME</a></li>
-                <!-- <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=1">ABOUT</a></li>-->
-                <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=1">SOBRE NÓS</a></li>
-                <li class="nav-items menu-sub-item"><a class="noSelect" href="index.php#tours">TOURS</a></li>
-                <!--<li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=2">TOURS</a></li>-->
-                <!-- <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=3">CONTACT</a></li> -->
-                <li class="nav-items menu-sub-item"><a class="noSelect" href="index.php#contact">CONTACTO</a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=0">HOME</a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=1">SOBRE NÓS</a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#tours">TOURS</a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#contact">CONTACTO</a></li>
                 <li class="nav-items menu-sub-item"></li>
                 <li class="nav-items book-button"><a class="noSelect" href="index.php#tours">RESERVA JÁ</a></li>
-
-                <!--<li class="nav-items nav-profile">
-                    <img src="./resources/_images/user.png" class="profile" />
-                    <ul class="dropdown">
-                        <li class="sub-item">
-                            <a class="noSelect" href="./client/account/index.php">
-                                <span class="material-icons-outlined" style="margin-right:6px;"> manage_accounts </span>
-                                PERFIL
-                            </a>
-                        </li>
-                        <li class="sub-item">
-                            <a class="noSelect" href="./client/login/logout.php">
-                                <span class="material-icons-outlined" style="margin-right:6px;"> logout </span>
-                                LOG OUT
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
+                <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
-                    <img src="<?php echo $language_image_src; ?>" class="profile" />
-                    <ul class="dropdown">
+                <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px;"/>
+                <ul id="dropdown-language" class="dropdown">
+                    <?php foreach ($languages as $language): ?>
                         <li class="sub-item">
-                            <a class="noSelect" href="./client/account/index.php">
-                                <span class="material-icons-outlined" style="margin-right:6px;"> manage_accounts </span>
-                                PERFIL
+                            <a class="noSelect language-option" href="#" data-language="<?php echo $language['code']; ?>">
+                                <img src="<?php echo $language['file_image']; ?>" alt="<?php echo $language['description']; ?>" class="language-image">
+                                <?php echo $language['description']; ?>
                             </a>
                         </li>
-                        <li class="sub-item">
-                            <a class="noSelect" href="./client/login/logout.php">
-                                <span class="material-icons-outlined" style="margin-right:6px;"> logout </span>
-                                LOG OUT
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+
                 <!-- <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=6">FAQ's</a></li> -->
-                <?php /*
-                
-                <li class="menu-sub-item responsive-profile">
+                <!--
+                <li class="menu-sub-item responsive-language">
                     <a class="noSelect" href="./client/account/index.php">
                         <span class="material-icons-outlined"> manage_accounts </span>
                         PERFIL
                     </a>
                 </li>
-                <li class="menu-sub-item responsive-profile">
+                <li class="menu-sub-item responsive-language">
                     <a class="noSelect" href="./client/login/logout.php">
                         <span class="material-icons-outlined"> logout </span>
                         LOG OUT
@@ -154,8 +127,8 @@ require_once "$language_file_name";
                 <?php if (!isset($_SESSION['logged'])) { ?>
                     <li class="nav-items menu-sub-item"><a class="noSelect" href="./client/login/login.php">LOG IN</a></li>
                 <?php } else { ?>
-                    <li class="nav-items nav-profile">
-                        <img src="./resources/_images/user.png" class="profile" />
+                    <li class="nav-items nav-language">
+                        <img src="./resources/_images/user.png" class="language" />
                         <ul class="dropdown">
                             <li class="sub-item">
                                 <a class="noSelect" href="./client/account/index.php">
@@ -171,8 +144,8 @@ require_once "$language_file_name";
                             </li>
                         </ul>
                     </li>
-                <?php } 
-                */ ?>
+                <?php } ?>
+                -->
             </ul>
         </div>
         <i class="fa fa-bars" onclick="openmenu()"></i>
@@ -302,6 +275,47 @@ require_once "$language_file_name";
                 navbar.classList.remove("scrolled");
             }
         };
+
+
+        var dropdown = document.getElementById("dropdown-language");
+
+        window.onclick = function (e) {
+            if (!e.target.matches('.language-image')) {
+                if (dropdown.style.display = "flex") {
+                    dropdown.style.display = "none";
+                }
+            } else {
+                if (dropdown.style.display = "none") {
+                    dropdown.style.display = "flex";
+                } else {
+                    dropdown.style.display = "none";
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var languageOptions = document.querySelectorAll('.language-option');
+        languageOptions.forEach(function(option) {
+            option.addEventListener('click', function(event) {
+                event.preventDefault();
+                var languageCode = option.getAttribute('data-language');
+                selectLanguage(languageCode);
+                dropdown.style.display = "none";
+            });
+        });
+
+        function selectLanguage(languageCode) {
+            var xhr = createXMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    window.location.reload();
+                }
+            };
+            xhr.open("GET", "./assets/update_language/update_language_session.php?language=" + encodeURIComponent(languageCode), true);
+            xhr.send();
+        }
+    });
+
     </script>
 </body>
 
