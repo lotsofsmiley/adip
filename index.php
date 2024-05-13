@@ -35,10 +35,11 @@ $language_image_src = './resources/_images/languages/en.jpg';
 if (isset($_SESSION['selected_language'])) {
     $selected_language = $_SESSION['selected_language'];
 
-    foreach ($languages as $language) {
-        if ($language['code'] === $selected_language) {
-            $language_file_name = $language['file_name'];
-            $language_image_src = $language['file_image'];
+    foreach ($languages as $l) {
+        if ($l['id'] === $selected_language) {
+            $language_file_name = $l['file_name'];
+            $language_image_src = $l['file_image'];
+            include($language_file_name);
             break;
         }
     }
@@ -87,22 +88,22 @@ if (isset($_SESSION['selected_language'])) {
             <i class="fa fa-times" onclick="closemenu()"></i>
             <ul id="menu">
                 <li class="nav-items menu-sub-item"></li>
-                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=0">HOME</a></li>
-                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=1">SOBRE NÓS</a></li>
-                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#tours">TOURS</a></li>
-                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#contact">CONTACTO</a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=0"><?php echo $language['NAV_HOME'] ?></a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=1"><?php echo $language['NAV_ABOUT'] ?></a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_TOURS'] ?></a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#contact"><?php echo $language['NAV_CONTACT'] ?></a></li>
                 <li class="nav-items menu-sub-item"></li>
-                <li class="nav-items book-button"><a class="noSelect" href="index.php#tours">RESERVA JÁ</a></li>
+                <li class="nav-items book-button"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_BOOK_BUTTON'] ?></a></li>
                 <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
                 <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px;"/>
                 <ul id="dropdown-language" class="dropdown">
-                    <?php foreach ($languages as $language): ?>
+                    <?php foreach ($languages as $l): ?>
                         <li class="sub-item">
-                            <a class="noSelect language-option" href="#" data-language="<?php echo $language['code']; ?>">
-                                <img src="<?php echo $language['file_image']; ?>" alt="<?php echo $language['description']; ?>" class="language-image">
-                                <?php echo $language['description']; ?>
+                            <a class="noSelect language-option" href="#" data-language="<?php echo $l['id']; ?>">
+                                <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image">
+                                <?php echo $l['description']; ?>
                             </a>
                         </li>
                     <?php endforeach; ?>
@@ -202,8 +203,7 @@ if (isset($_SESSION['selected_language'])) {
                 <img src="./resources/_images/full_nobg_logo.png" alt="adip" class="logo-image noSelect">
             </div>
             <div class="footer-description">
-                Prepare-se para embarcar numa viagem de descoberta e paixão com aDayinDouro. Fundada em 2011 pelo visionário Manuel Guimarães, um engenheiro informático de coração apaixonado, esta empresa familiar é muito mais do que uma empresa - é uma celebração de emoções e laços familiares.<br>
-                Prove connosco o autêntico Vale do Douro para fazer parte da Experiência mais autêntica do Douro em 2019!
+               <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
             </div>
         </div>
 
@@ -212,7 +212,7 @@ if (isset($_SESSION['selected_language'])) {
             </div>-->
 
         <div class="footer-column footer-contact">
-            <h3 class="footer-title">Contacte-nos!</h3>
+            <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_CONTACT'] ?></h3>
             <a class="footer-contact-phone" target="_blank" href="tel:+351 916 541 852">
                 <i class="footer-contact-icon fa fa-phone"></i>
                 (+351) 916 541 852
@@ -225,7 +225,7 @@ if (isset($_SESSION['selected_language'])) {
         </div>
 
         <div class="footer-column footer-contact">
-            <h3 class="footer-title">Visite as nossas redes sociais!</h3>
+            <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_SOCIAL'] ?></h3>
             <?php foreach ($socials as $social) {
                 echo "
                 <a class='social-platform' target='_blank' href='" . $social['value'] . "'>

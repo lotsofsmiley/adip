@@ -66,7 +66,7 @@ h3{
 
 .paragraph-description{
     color: #777;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 300;
     line-height: 24px;
     padding: 10px;
@@ -126,7 +126,7 @@ nav img{
 .book-button a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 300;
     
 }
@@ -260,6 +260,9 @@ nav .fa{
     .text-box h1{
         font-size: 25px;
     }
+    .paragraph-description{
+        font-size: 16px;
+    }
     .nav-links ul .menu-sub-item{
         display: block;
     }
@@ -291,6 +294,7 @@ nav .fa{
     width: 100%;
     max-height: 30px;
     margin-top: 5px;
+    margin-right: 10px;
     object-fit: cover;
     object-position: 50% 50%;
 }
@@ -304,7 +308,7 @@ nav .fa{
 
 .nav-language .dropdown {
     display: none;
-    width: 125px;
+    width: auto;
     height: auto;
     position: absolute;
     top: 100%;
@@ -389,7 +393,7 @@ nav .fa{
 
     .about-row {
         display: flex;
-        height: 420px;
+        height: auto;
     }
 }
 
@@ -523,6 +527,10 @@ nav .fa{
     .tours-row{
         flex-direction: column;
     }
+
+    .tours-img-col{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
 }
 
 /********************************************* Tours - Comments *********************************************/
@@ -553,6 +561,21 @@ nav .fa{
 .comments-col h3{
     margin-top: 0;
     
+}
+
+/********************************************* Portugal Wines Club *********************************************/
+
+.pwc {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.pwc-title {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 /********************************************* Footer *********************************************/
@@ -595,7 +618,7 @@ nav .fa{
 
 @media (max-width: 1199px) {
     .footer-column {
-        margin: 1rem;
+        margin: 2rem 1rem 2rem 1rem; 
     }
     .footer-about {
         margin-top: 0;

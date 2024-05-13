@@ -1,8 +1,5 @@
 @import url(../resources/css/styles.css);
 
-:root {
-    
-}
 
 /****************************************************************** ABOUT US ******************************************************************/
 
@@ -25,9 +22,6 @@
     text-align: center;
 }
 
-.about-text-box h1 {
-    font-size: 62px;
-}
 
 .about-text-box p {
     margin: 10px 0 40px;
@@ -42,26 +36,24 @@
 }
 
 .about-us-row {
-    width: calc(100% - 10rem);
     display: flex;
     text-align: center;
-    height: 400px;
-    padding: 1rem 5rem;
+    flex-direction: column;
 }
 
 .about-us-row-img-col {
-    width: 40%;
+    width: 100%;
     margin: auto;
     border: 1px solid black;
-    height:400px;
+    height: 400px;
 }
 
 .about-us-row-text-col {
-    width: 60%;
+    width: 90%;
     margin: auto;
-    padding: 1rem 4rem;
+    padding: 1.5rem 1rem;
     text-align: justify;
-    line-height: 1.75rem;
+    line-height: 1.65rem;
 }
 
 .about-employees {
@@ -91,12 +83,38 @@
     padding-top: 5rem;
 }
 
+
 @media (min-width: 62.001rem){
     .about-employees-team {
         grid-template-columns: repeat(3,1fr);
     }
+
+    .about-us-row {
+        flex-direction: row;
+        padding: 1rem;
+        height: 400px;
+        width: 100%;
+    }
+
+    .about-us-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .about-us-row-text-col {
+        width: 60%;
+        padding: 1rem 2rem;
+    }
+
+    .about-us-row-img-col {
+        width: 40%;
+    }
 }
 
+@media (min-width: 36.001rem) and (max-width: 62.000rem) {
+    .about-employees-team{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
 @media (min-width: 75.001rem){
     .about-employees-team {
