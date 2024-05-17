@@ -99,7 +99,7 @@ if (isset($_SESSION['selected_language'])) {
                 <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
-                    <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px;" />
+                    <img src="<?php echo $language_image_src; ?>" class="language-image" />
                     <ul id="dropdown-language" class="dropdown">
                         <?php foreach ($languages as $l) : ?>
                             <li class="sub-item">
@@ -111,44 +111,6 @@ if (isset($_SESSION['selected_language'])) {
                         <?php endforeach; ?>
                     </ul>
                 </li>
-
-                <!-- <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=6">FAQ's</a></li> -->
-                <!--
-                <li class="menu-sub-item responsive-language">
-                    <a class="noSelect" href="./client/account/index.php">
-                        <span class="material-icons-outlined"> manage_accounts </span>
-                        PERFIL
-                    </a>
-                </li>
-                <li class="menu-sub-item responsive-language">
-                    <a class="noSelect" href="./client/login/logout.php">
-                        <span class="material-icons-outlined"> logout </span>
-                        LOG OUT
-                    </a>
-                </li>
-
-                <?php if (!isset($_SESSION['logged'])) { ?>
-                    <li class="nav-items menu-sub-item"><a class="noSelect" href="./client/login/login.php">LOG IN</a></li>
-                <?php } else { ?>
-                    <li class="nav-items nav-language">
-                        <img src="./resources/_images/user.png" class="language" />
-                        <ul class="dropdown">
-                            <li class="sub-item">
-                                <a class="noSelect" href="./client/account/index.php">
-                                    <span class="material-icons-outlined" style="margin-right:6px;"> manage_accounts </span>
-                                    PERFIL
-                                </a>
-                            </li>
-                            <li class="sub-item">
-                                <a class="noSelect" href="./client/login/logout.php">
-                                    <span class="material-icons-outlined" style="margin-right:6px;"> logout </span>
-                                    LOG OUT
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                <?php } ?>
-                -->
             </ul>
         </div>
         <i class="fa fa-bars" onclick="openmenu()"></i>
@@ -200,7 +162,6 @@ if (isset($_SESSION['selected_language'])) {
     </section>
     <footer class="footer" id="contact">
         <div class="footer-column footer-about">
-            <!--<h3 class="company-title">aDayinPorto</h3>-->
             <div class="logo-container">
                 <img src="./resources/_images/full_nobg_logo.png" alt="adip" class="logo-image noSelect">
             </div>
@@ -208,10 +169,6 @@ if (isset($_SESSION['selected_language'])) {
                 <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
             </div>
         </div>
-
-        <!--<div class="footer-column footer-legal">
-                <a class="footer-policies">Privacy Policy & Terms and Conditions</a>
-            </div>-->
 
         <div class="footer-column footer-contact">
             <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_CONTACT'] ?></h3>

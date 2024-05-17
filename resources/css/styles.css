@@ -305,6 +305,7 @@ nav .fa{
     height: 2.5rem;
     width: auto;
     cursor: pointer;
+    margin-right: -20px;
 }
 
 .nav-language .dropdown {
