@@ -451,7 +451,6 @@ nav .fa{
 .tours-img-col{
     flex-basis: 28%;
     border-radius: 10px;
-    margin-bottom: 5%;
     position: relative;
     overflow: hidden;
     text-align: left;
@@ -585,15 +584,22 @@ nav .fa{
 /********************************************* Portugal Wines Club *********************************************/
 
 .pwc {
-    width: 100%;
     margin-block: 100px;
-    padding-block: 100px;
-    padding-left: 100px;
     height: 400px;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../_images/landscape8.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+}
+
+@media (min-width: 770px) {
+    .pwc {
+        padding: 6.75rem 10.5rem;
+    }
+}
+@media (max-width: 770px) {
+    .pwc {
+        padding: 6.75rem 2rem;
+    }
 }
 
 .pwc-title {
@@ -602,15 +608,14 @@ nav .fa{
 }
 
 .pwc-content-box {
-    background-color: #fff;
-    width: 35%;
-    height: 100%;
-    display: block;
-    border-radius: 5px;
+    max-width: 500px;
 }
 
 .pwc-content {
-    padding: 4rem;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
 }
 
 .pwc-content-text {
@@ -619,13 +624,18 @@ nav .fa{
 
 .pwc-content-button {
     margin-block: 2rem;
-    color: var(--alt-contrast-color);
     transition: 0.5s;
 }
 
-.pwc-content-button:hover {
+.pwc-content-button a {
+    text-decoration: none;
+    color: var(--alt-contrast-color);
+}
+
+.pwc-content-button a:hover {
     color: var(--alt-contrast-color-hover);
 }
+
 
 /********************************************* Footer *********************************************/
 

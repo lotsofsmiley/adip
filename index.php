@@ -99,18 +99,18 @@ if (isset($_SESSION['selected_language'])) {
                 <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
-                <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px;"/>
-                <ul id="dropdown-language" class="dropdown">
-                    <?php foreach ($languages as $l): ?>
-                        <li class="sub-item">
-                            <a class="noSelect language-option" href="#" data-language="<?php echo $l['id']; ?>">
-                                <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image">
-                                <?php echo $l['description']; ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </li>
+                    <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px;" />
+                    <ul id="dropdown-language" class="dropdown">
+                        <?php foreach ($languages as $l) : ?>
+                            <li class="sub-item">
+                                <a class="noSelect language-option" href="#" data-language="<?php echo $l['id']; ?>">
+                                    <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image">
+                                    <?php echo $l['description']; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
 
                 <!-- <li class="nav-items menu-sub-item"><a class="noSelect" href="./?p=6">FAQ's</a></li> -->
                 <!--
@@ -205,7 +205,7 @@ if (isset($_SESSION['selected_language'])) {
                 <img src="./resources/_images/full_nobg_logo.png" alt="adip" class="logo-image noSelect">
             </div>
             <div class="footer-description">
-               <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
+                <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
             </div>
         </div>
 
@@ -234,24 +234,6 @@ if (isset($_SESSION['selected_language'])) {
                     <i class='" . $social['icon_class'] . "'></i>
                 </a>";
             } ?>
-
-            <!--
-            <a class="social-platform" target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g189180-d4137824-Reviews-Taste_Porto_Food_Tours-Porto_Porto_District_Northern_Portugal.html">
-                <i class="social-platform-icon fab fa-tripadvisor"></i>
-            </a>
-            <a class="social-platform" target="_blank" href="">
-                <i class="social-platform-icon fab fa-twitter"></i>
-            </a>
-            <a class="social-platform" style="margin-right:5px;" target="_blank" href="https://www.youtube.com/channel/UCWWG4QPG8QFUJVZHKcPjcHg">
-                <i class="social-platform-icon fa fa-youtube"></i>
-            </a>
-            <a class="social-platform" target="_blank" href="https://www.facebook.com/adayinporto/">
-                <i class="social-platform-icon fa fa-facebook-square"></i>
-            </a>
-            <a class="social-platform" target="_blank" href="https://www.instagram.com/adayindouro/">
-                <i class="social-platform-icon fa fa-instagram"></i>
-            </a>
-            -->
         </div>
     </footer>
 
@@ -281,7 +263,7 @@ if (isset($_SESSION['selected_language'])) {
 
         var dropdown = document.getElementById("dropdown-language");
 
-        window.onclick = function (e) {
+        window.onclick = function(e) {
             if (!e.target.matches('.language-image')) {
                 if (dropdown.style.display = "flex") {
                     dropdown.style.display = "none";
@@ -296,28 +278,27 @@ if (isset($_SESSION['selected_language'])) {
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-        var languageOptions = document.querySelectorAll('.language-option');
-        languageOptions.forEach(function(option) {
-            option.addEventListener('click', function(event) {
-                event.preventDefault();
-                var languageCode = option.getAttribute('data-language');
-                selectLanguage(languageCode);
-                dropdown.style.display = "none";
+            var languageOptions = document.querySelectorAll('.language-option');
+            languageOptions.forEach(function(option) {
+                option.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var languageCode = option.getAttribute('data-language');
+                    selectLanguage(languageCode);
+                    dropdown.style.display = "none";
+                });
             });
+
+            function selectLanguage(languageCode) {
+                var xhr = createXMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        window.location.reload();
+                    }
+                };
+                xhr.open("GET", "./assets/update_language/update_language_session.php?language=" + encodeURIComponent(languageCode), true);
+                xhr.send();
+            }
         });
-
-        function selectLanguage(languageCode) {
-            var xhr = createXMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    window.location.reload();
-                }
-            };
-            xhr.open("GET", "./assets/update_language/update_language_session.php?language=" + encodeURIComponent(languageCode), true);
-            xhr.send();
-        }
-    });
-
     </script>
 </body>
 

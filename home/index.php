@@ -1,5 +1,5 @@
 <?php
-if(isset($selected_language)){
+if (isset($selected_language)) {
     $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
     $sql = "SELECT * FROM tour WHERE language = '$selected_language'";
     $result = mysqli_query($conn, $sql);
@@ -72,15 +72,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 </section>
 
 <section class="pwc">
-        <div class="pwc-content-box">
-            <div class="pwc-content">
-                <h1 class="pwc-title">Portugal Wines Club</h1>
-                <div class="pwc-content-text">
-                    Let us connect you with the winemaking families of the Douro Valley, Portugal
-                </div>
-                <div class="pwc-content-button">
-                    Join Us!!
-                </div>
+    <div class="pwc-content-box">
+        <div class="pwc-content">
+            <h1 class="pwc-title"><?php echo $language['PWC_SECTION_TITLE'] ?></h1>
+            <div class="pwc-content-text">
+                <?php echo $language['PWC_SECTION_TEXT'] ?>
+            </div>
+            <div class="pwc-content-button">
+                <a href="https://www.portugalwines.club"><?php echo $language['PWC_SECTION_BUTTON'] ?></a>
             </div>
         </div>
+    </div>
 </section>
