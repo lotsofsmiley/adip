@@ -31,6 +31,9 @@ $language['FOOTER_SECTION_MAIN_TEXT'] = 'Prepare-se para embarcar numa viagem de
 $language['FOOTER_SECTION_CONTACT'] = 'Contacte-nos!';
 $language['FOOTER_SECTION_SOCIAL'] = 'Visite as nossas redes sociais!';
 
+
+$language['ABOUT_TITLE'] = 'Sobre nós';
+$language['ABOUT_TEXT'] = 'Conhece a nossa história, quem nós somos e as pessoas maravilhosas que compõem a nossa equipa!';
 $language['ABOUT_TEXT_1'] = ' A paixão de Manuel e da sua família pelo Vale do Douro era uma chama acesa dentro deles.
                 Cada canto, cada vinhedo, cada sabor continha uma história profunda e emocionalmente cativante.
                 Foi assim que nasceu a ideia de oferecer passeios personalizados que fossem além de uma simples visita.<br>

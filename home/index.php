@@ -1,7 +1,9 @@
 <?php
-$selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
-$sql = "SELECT * FROM tour WHERE language = '$selected_language'";
-$result = mysqli_query($conn, $sql);
+if(isset($selected_language)){
+    $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
+    $sql = "SELECT * FROM tour WHERE language = '$selected_language'";
+    $result = mysqli_query($conn, $sql);
+}
 
 if (!$result) {
     echo 'Falha na consulta: ' . mysqli_error($conn);
@@ -36,7 +38,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <div class="about-row" F>
         <div class="about-img-col">
-
+            <img class="about-img" src='./resources/_images/landscape3.jpg'>
         </div>
         <div class="about-text-col">
             <h1><?php echo $language['ABOUT_SECTION_TITLE'] ?></h1>
@@ -67,4 +69,18 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>";
         } ?>
     </div>
+</section>
+
+<section class="pwc">
+        <div class="pwc-content-box">
+            <div class="pwc-content">
+                <h1 class="pwc-title">Portugal Wines Club</h1>
+                <div class="pwc-content-text">
+                    Let us connect you with the winemaking families of the Douro Valley, Portugal
+                </div>
+                <div class="pwc-content-button">
+                    Join Us!!
+                </div>
+            </div>
+        </div>
 </section>

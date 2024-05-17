@@ -30,4 +30,12 @@ $language['FOOTER_SECTION_MAIN_TEXT'] = "Prepare yourself to embark on a journey
                                          <br><br>Join us to experience the authentic Douro Valley and become part of the most authentic Douro Experience in 2019!";
 $language['FOOTER_SECTION_CONTACT'] = 'Contact us!';
 $language['FOOTER_SECTION_SOCIAL'] = 'Visit our social media!';
+
+$language['ABOUT_TITLE'] = 'About us';
+$language['ABOUT_TEXT'] = 'Know more about our story, who we are and the amazing people that compose our team!';
+$language['ABOUT_TEXT_1'] = "Manuel and his family's passion for the Douro Valley was a burning flame within them. Every corner, every vineyard, every flavor held a deep and emotionally captivating story. This is how the idea of offering personalized tours that went beyond a simple visit was born.<br>Each tour with aDayinDouro is a total immersion in the wonders of the Douro Valley. From the picturesque vineyard-covered hills to the traditional wineries, each stop is an opportunity to fall in love with the rich history and culture of the region. But the true charm lies in the people - Manuel's family, with their warm smiles and generous hearts, guides each guest on a journey of deep connections and touching moments, making them part of the family.";
+$language['ABOUT_TEXT_2'] = "Manuel and his family's story came to life when, in 2019, they were honored with the prestigious 'Most Authentic Douro Airbnb Experience of 2019' award. This recognition was a seal of approval for the passion and dedication they put into each visit and reaffirmed that they were on the right path to creating unforgettable memories. With aDayinDouro, every day is filled with love, connection, and a touch of magic. It's a family business where emotions overflow in every interaction, and every customer becomes part of an ever-evolving story.";
+$language['ABOUT_TEXT_3'] = "United by love and passion for the Douro Valley, Manuel, his family, and their passionate team are ready to share the most exciting journey of your life.<br>Join us and let yourself be carried away by the excitement as we together discover the essence of the Douro Valley, an experience that will touch your heart and awaken your senses. Welcome to aDayinDouro - where passion, discovery, and family ties meet.";
+$language['TEAM_TITLE'] = "Family Members";
+$language['TEAM_TEXT'] = "Meet our fantastic team.";
 ?>

@@ -43,6 +43,8 @@ if (isset($_SESSION['selected_language'])) {
             break;
         }
     }
+} elseif (!isset($_SESSION['selected_language'])) {
+    $_SESSION['selected_language'] = '2';
 }
 
 ?>
@@ -82,7 +84,7 @@ if (isset($_SESSION['selected_language'])) {
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-logo-container">
-            <img src="./resources/_images/full_nobg_logo.png" alt="aDayinDouro" class="logo-image noSelect">
+            <a class="noSelect" href="index.php"><img src="./resources/_images/full_nobg_logo.png" alt="aDayinDouro" class="logo-image noSelect"></a>
         </div>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="closemenu()"></i>

@@ -1,5 +1,6 @@
 <?php
-    $sql = "SELECT * FROM employees WHERE language = 1";
+    $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
+    $sql = "SELECT * FROM employees WHERE language = '$selected_language'";
     $result = mysqli_query($conn, $sql);
     
     if (!$result) {
@@ -21,15 +22,15 @@
 
 <section>
     <div class="about-text-box">
-        <h1>Sobre nós</h1>
-        <p class="paragraph-description">aaaaaa</p>
+        <h1><?php echo $language['ABOUT_TITLE'] ?></h1>
+        <p class="paragraph-description"><?php echo $language['ABOUT_TEXT'] ?></p>
     </div>
 </section>
 
 <section class="about-us">
     <div class="about-us-row">
         <div class="about-us-row-img-col">
-            aaa
+            <img class="about-us-row-img" src='./resources/_images/landscape8.jpg'>
         </div>
         <div class="about-us-row-text-col">
             <?php echo $language['ABOUT_TEXT_1']?>
@@ -37,7 +38,7 @@
     </div>
     <div class="about-us-row about-us-row-reverse">
          <div class="about-us-row-img-col">
-            aaa
+            <img class="about-us-row-img" src='./resources/_images/team.jpg'>
         </div>
         <div class="about-us-row-text-col">
             <?php echo $language['ABOUT_TEXT_2']?>
@@ -45,7 +46,7 @@
     </div>
     <div class="about-us-row">
         <div class="about-us-row-img-col">
-            aaa
+            <img class="about-us-row-img" src='./resources/_images/landscape5.jpg'>
         </div>
         <div class="about-us-row-text-col">
             <?php echo $language['ABOUT_TEXT_3']?>
