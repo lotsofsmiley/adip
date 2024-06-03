@@ -5,7 +5,7 @@ $language['NAV_TOURS'] = 'EXPERIÊNCIAS';
 $language['NAV_CONTACT'] = 'CONTACTO';
 $language['NAV_BOOK_BUTTON'] = 'RESERVA JÁ!';
 
-$language['MAIN_HEADER'] = '"A mais autêntica experiência Airbnb<br><br> no Douro de 2019"';
+$language['MAIN_HEADER'] = '"A mais autêntica experiência Airbnb<br> no Douro de 2019"';
 $language['MAIN_HEADER_TEXT'] = 'Prepare-se para embarcar numa viagem de descoberta e paixão com aDayinDouro. Fundada em 2011 pelo visionário Manuel Guimarães,  um engenheiro de computação com um coração apaixonado, esta empresa familiar é muito mais do que apenas uma empresa - é uma celebração de emoções e laços familiares. <br><br>Prove connosco o autêntico Vale do Douro para fazer parte da Experiência mais autêntica do Douro em 2019!';
 $language['MAIN_HEADER_BUTTON'] = 'Experiências';
 

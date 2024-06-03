@@ -89,6 +89,19 @@ if (isset($_SESSION['selected_language'])) {
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="closemenu()"></i>
             <ul id="menu">
+                <li class="nav-items menu-sub-item language-sub-item nav-language">
+                    <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px; " />
+                    <ul id="dropdown-language" class="dropdown">
+                        <?php foreach ($languages as $l) : ?>
+                            <li class="sub-item">
+                                <a class="noSelect language-option" href="#" data-language="<?php echo $l['id']; ?>">
+                                    <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image">
+                                    <?php echo $l['description']; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
                 <li class="nav-items menu-sub-item"></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=0"><?php echo $language['NAV_HOME'] ?></a></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=1"><?php echo $language['NAV_ABOUT'] ?></a></li>
@@ -99,7 +112,7 @@ if (isset($_SESSION['selected_language'])) {
                 <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
-                    <img src="<?php echo $language_image_src; ?>" class="language-image" />
+                    <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px; " />
                     <ul id="dropdown-language" class="dropdown">
                         <?php foreach ($languages as $l) : ?>
                             <li class="sub-item">

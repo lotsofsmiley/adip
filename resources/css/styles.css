@@ -215,6 +215,10 @@ nav .fa{
     display: none;
 }
 
+.language-sub-item {
+    display: none!important;
+}
+
 @media(max-width: 1640px){
     #backoffice{
         display: none;
@@ -267,11 +271,14 @@ nav .fa{
     .nav-links ul .menu-sub-item{
         display: block;
     }
+
+    .language-sub-item{
+        display: block!important;
+    }
     .nav-links{
         position: absolute;
         background: var(--dark-background-color);
         height: auto;
-        width: 200px;
         top: 0;
         right: -200px;
         text-align: left;
@@ -286,7 +293,7 @@ nav .fa{
         cursor: pointer;
     }
     .nav-links ul{
-        padding: 30px;
+        padding: 0 30px 30px 30px;
     }
 }
 
@@ -305,7 +312,6 @@ nav .fa{
     height: 2.5rem;
     width: auto;
     cursor: pointer;
-    margin-right: -20px;
 }
 
 .nav-language .dropdown {
@@ -539,6 +545,10 @@ nav .fa{
 
     .tours-img-col{
         box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        margin-bottom: 50px;
+    }
+    .pwc{
+        margin-top: 50px!important;
     }
 }
 
