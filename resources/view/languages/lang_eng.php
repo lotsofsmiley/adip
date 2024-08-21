@@ -16,6 +16,7 @@ $language['ABOUT_SECTION_BUTTON'] = 'Know more..';
 $language['TOURS_SECTION_TITLE'] = 'Our experiences';
 $language['TOURS_SECTION_TEXT'] = "Here you can check out our different options for wine tours. According to your profile, personality, and budget, we can provide you with a life experience you will never forget! Become part of our family by signing up for a wine tour below!";
 $language['TOURS_SECTION_BUTTON'] = 'Check experience';
+$language['TOURS_SECTION_BUTTON_2'] = 'Book experience';
 
 $language['PWC_SECTION_TITLE'] = 'Portugal Wines Club';
 $language['PWC_SECTION_TEXT'] = 'Let us connect you with the winemaking families of the Douro Valley, Portugal';
@@ -32,4 +33,28 @@ $language['ABOUT_TEXT_2'] = "Manuel and his family's story came to life when, in
 $language['ABOUT_TEXT_3'] = "United by love and passion for the Douro Valley, Manuel, his family, and their passionate team are ready to share the most exciting journey of your life.<br>Join us and let yourself be carried away by the excitement as we together discover the essence of the Douro Valley, an experience that will touch your heart and awaken your senses. Welcome to aDayinDouro - where passion, discovery, and family ties meet.";
 $language['TEAM_TITLE'] = "Family Members";
 $language['TEAM_TEXT'] = "Meet our fantastic team.";
+
+$language['TOURS_TITLE'] = "Experiences";
+$language['TOURS_DESCRIPTION'] = "Here you can check out our different wine tour options. According to your profile, personality, and budget, we can provide you with a life experience you will never forget! Become part of our family by signing up for a wine tour below!";
+$language['TOUR_SIDE_TITLE'] = "Book now!";
+$language['TOUR_SIDE_SUBTITLE'] = "Choose a date!";
+    //weekdays
+    $language['MONDAY'] = "Monday";
+    $language['TUESDAY'] = "Tuesday";
+    $language['WEDNESDAY'] = "Wednesday";
+    $language['THURSDAY'] = "Thursday";
+    $language['FRIDAY'] = "Friday";
+    $language['SATURDAY'] = "Saturday";
+    $language['SUNDAY'] = "Sunday";
+$language['TOUR_SIDE_AVAILABILITY'] = "Tickets available";
+$language['TOUR_SIDE_PEOPLE'] = "Person";
+$language['TOUR_SIDE_BUTTON'] = "Choose";
+
+$language['LOGIN_TITLE'] = "Login";
+$language['LOGIN_EMAIL'] = "Email";
+$language['LOGIN_PASSWORD'] = "Password";
+$language['LOGIN_RECOVER_PASSWORD'] = "Recover Password.";
+$language['LOGIN_REGISTER'] = "Don't own an account? Create one!";
+$language['LOGIN_BACK_BUTTON'] = "Back";
+$language['LOGIN_BUTTON'] = "Login";
 ?>

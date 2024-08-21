@@ -314,7 +314,30 @@ nav .fa{
     cursor: pointer;
 }
 
+.nav-language .language-image-responsive {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: auto;
+    cursor: pointer;
+}
+
 .nav-language .dropdown {
+    display: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    background-color: var(--dark-background-color);
+    padding: 10px;
+    border: 2px solid var(--medium-background-color);
+    border-radius: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-language .dropdown-responsive {
     display: none;
     width: auto;
     height: auto;

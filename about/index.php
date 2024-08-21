@@ -1,6 +1,6 @@
 <?php
     $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
-    $sql = "SELECT * FROM employees WHERE language = '$selected_language'";
+    $sql = "SELECT * FROM employees WHERE language = '$selected_language' and display = 1";
     $result = mysqli_query($conn, $sql);
     
     if (!$result) {

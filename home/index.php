@@ -1,7 +1,7 @@
 <?php
 if (isset($selected_language)) {
     $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
-    $sql = "SELECT * FROM tour WHERE language = '$selected_language'";
+    $sql = "SELECT * FROM tour WHERE language = '$selected_language' limit 3";
     $result = mysqli_query($conn, $sql);
 }
 
@@ -65,7 +65,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <img class='tour-image' src='resources/_images/" . $tour['image'] . "'>
                         <h3 class='tour-title'>" . $tour['name'] . "</h3>
                         <p class='tour-description'>" . $tour['description'] . "</p>
-                        <a href='./?p=21&id=" . $tour['id'] . "' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON'] . "</a>
+                        <a href='./?p=21&id=" . $tour['id'] . "' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
                     </div>";
         } ?>
     </div>

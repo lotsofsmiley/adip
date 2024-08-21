@@ -1,4 +1,7 @@
 <?php
+$filename = './resources/css/styles.css';
+$fileModified = substr(md5(filemtime($filename)), 0, 6);
+
 session_start();
 $op = 0;
 if (isset($_GET['p']))
@@ -6,6 +9,8 @@ if (isset($_GET['p']))
 
 // Include database connection
 require('./assets/scripts/db/connect.php');
+
+
 
 $sql = "SELECT * FROM social_media";
 $result = mysqli_query($conn, $sql);
@@ -46,7 +51,6 @@ if (isset($_SESSION['selected_language'])) {
 } elseif (!isset($_SESSION['selected_language'])) {
     $_SESSION['selected_language'] = '2';
 }
-
 ?>
 
 
@@ -58,7 +62,7 @@ if (isset($_SESSION['selected_language'])) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aDayinDouro</title>
-    <link rel="stylesheet" href="./resources/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $filename;?>?v=<?php echo $fileModified ; ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -90,12 +94,12 @@ if (isset($_SESSION['selected_language'])) {
             <i class="fa fa-times" onclick="closemenu()"></i>
             <ul id="menu">
                 <li class="nav-items menu-sub-item language-sub-item nav-language">
-                    <img src="<?php echo $language_image_src; ?>" class="language-image" style="margin-right: -20px; " />
-                    <ul id="dropdown-language" class="dropdown">
+                    <img src="<?php echo $language_image_src; ?>" class="language-image-responsive" style="margin-right: -20px; " />
+                    <ul id="dropdown-language-responsive" class="dropdown-responsive">
                         <?php foreach ($languages as $l) : ?>
                             <li class="sub-item">
                                 <a class="noSelect language-option" href="#" data-language="<?php echo $l['id']; ?>">
-                                    <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image">
+                                    <img src="<?php echo $l['file_image']; ?>" alt="<?php echo $l['description']; ?>" class="language-image-responsive">
                                     <?php echo $l['description']; ?>
                                 </a>
                             </li>
@@ -160,11 +164,19 @@ if (isset($_SESSION['selected_language'])) {
                 include("./contact/index.php");
                 break;
 
+            case 4:
+                include("./client/login/login.php");
+                break;
+
             case 5:
-                include("./login/logout.php");
+                include("./client/login/logout.php");
                 break;
 
             case 6:
+                include("./account/index.php");
+                break;
+
+            case 7:
                 include("./faqs/index.php");
                 break;
 
@@ -232,6 +244,7 @@ if (isset($_SESSION['selected_language'])) {
 
 
         var dropdown = document.getElementById("dropdown-language");
+        var dropdownresponsive = document.getElementById("dropdown-language-responsive");
 
         window.onclick = function(e) {
             if (!e.target.matches('.language-image')) {
@@ -243,6 +256,17 @@ if (isset($_SESSION['selected_language'])) {
                     dropdown.style.display = "flex";
                 } else {
                     dropdown.style.display = "none";
+                }
+            }
+            if (!e.target.matches('.language-image-responsive')) {
+                if (dropdownresponsive.style.display = "flex") {
+                    dropdownresponsive.style.display = "none";
+                }
+            } else {
+                if (dropdownresponsive.style.display = "none") {
+                    dropdownresponsive.style.display = "flex";
+                } else {
+                    dropdownresponsive.style.display = "none";
                 }
             }
         }

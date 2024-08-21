@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "db";
+$dbname = "main";
 
 $conn = @mysqli_connect($servername, $username, $password, $dbname) or 
 die("Impossível estabelecer uma conex&atilde;o.");

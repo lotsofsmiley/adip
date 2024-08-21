@@ -1,0 +1,65 @@
+@import url(../../resources/css/styles.css);
+
+
+body .profile {
+    background-color: #f3f4f7;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: var(--alt-contrast-color);
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--alt-contrast-color);
+}
+
+.content > p,
+.content > div {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    margin: 25px 0;
+    padding: 25px;
+    background-color: #fff;
+}
+
+.content > p table td,
+.content > div table td {
+    padding: 5px;
+}
+
+.content > p table td:first-child,
+.content > div table td:first-child {
+    font-weight: bold;
+    color: var(--alt-contrast-color);
+    padding-right: 15px;
+}
+
+.content > div p {
+    padding: 5px;
+    margin: 0 0 10px 0;
+}
+
+.change-pass a {
+    text-decoration: none;
+    color: var(--alt-contrast-color);
+}
+
+.change-pass a:hover {
+    color: var(--alt-contrast-color-hover);
+    transition: color 0.2s;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

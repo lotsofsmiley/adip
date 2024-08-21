@@ -1,0 +1,14 @@
+{
+  "name": "adip",
+  "version": "1.0.0",
+  "description": "Website for a company centered around tourism",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  }
+}

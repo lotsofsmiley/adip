@@ -1,0 +1,182 @@
+/*@import url('../../resources/css/styles.css');*/
+:root {
+    --dark-background-color: #1f272e;
+    --medium-background-color: #666;
+    --light-background-color: #efefef;
+
+    --contrast-color: rgba(68, 107, 140, 1);
+    --alt-contrast-color: rgba(83, 129, 172, 1);
+    --dark-text-color: var(--dark-background-color);
+    --medium-text-color: var(--medium-background-color);
+    --lighter-text-reverse-color: var(--light-background-color);
+    --light-text-reverse-color: #ddd;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 95%;
+}
+
+body {
+    /* background-color: #435165; */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../../resources/_images/porto_login.jpg);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.login, .register {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    margin: 100px auto;
+}
+
+@media(min-width: 450px){
+    .login, .register {
+        width: 100%;
+    }
+}
+
+@media(min-width: 451px) {
+    .login, .register {
+        width: 400px;
+    }
+}
+
+.login h1,
+.register h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.login form,
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login form label,
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-background-color);
+    color: #ffffff;
+    position: absolute;
+}
+
+.buttons {
+    display: inline-table;
+    width: 100%;
+}
+
+.login form input[type="password"],
+.login form input[type="text"],
+.login form input[type="email"],
+.register form input[type="password"],
+.register form input[type="text"],
+.register form input[type="email"] {
+    width: calc(100% - 51px);
+    margin-left: 50px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    padding: 0 15px;
+}
+
+.login form input[type="text"],
+.login form input[type="email"],
+.register form input[type="text"],
+.register form input[type="email"] {
+    margin-bottom: 20px;
+}
+
+.login form input[type="password"], 
+.register form input[type="password"] {
+    margin-bottom: 10px;
+}
+
+.login form .buttons input[type="submit"], 
+.login form .buttons input[type="button"],
+.register form .buttons input[type="submit"],
+.register form .buttons input[type="button"] {
+    padding: 15px;
+    margin-top: 5px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.login form .buttons input[type="submit"],
+.register form .buttons input[type="submit"]{
+    background-color: var(--dark-background-color);
+    width: 75%;}
+.login form .buttons input[type="button"],
+.register form .buttons input[type="button"] {
+    background-color: var(--contrast-color);
+    width: 25%;}
+
+.login form .buttons input[type="submit"]:hover,
+.register form .buttons input[type="submit"]:hover {
+    background-color: #29343d;
+    transition: background-color 0.2s;
+}
+
+.login form .buttons input[type="button"]:hover,
+.register form .buttons input[type="button"]:hover {
+    background-color: var(--alt-contrast-color);
+    transition: background-color 0.2s;
+}
+
+.register-link, .login-link {
+    text-align: left;
+}
+
+.login .register-link, .register .login-link {
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    padding-inline: 20px;
+}
+
+.register-link, .login-link {
+    margin-top: 30px;
+}
+
+
+.register-link a,
+.login-link a,
+.input a {
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+
+.register-link a:hover,
+.login-link a:hover,
+.input a:hover {
+    color: var(--alt-contrast-color);
+    transition: color 0.2s;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+

@@ -16,6 +16,8 @@ $language['ABOUT_SECTION_BUTTON'] = 'Saber mais..';
 $language['TOURS_SECTION_TITLE'] = 'As nossas Experiências';
 $language['TOURS_SECTION_TEXT'] = 'Aqui pode ver as nossas diferentes opções de passeios vínicos. De acordo com o seu perfil, personalidade e orçamento, podemos proporcionar-lhe uma experiência de vida que nunca irá esquecer! Faça parte da nossa família inscrevendo-se para um tour de vinhos abaixo!';
 $language['TOURS_SECTION_BUTTON'] = 'Ver experiência';
+$language['TOURS_SECTION_BUTTON_2'] = 'Reservar experiência';
+
 
 $language['FOOTER_SECTION_MAIN_TEXT'] = 'Prepare-se para embarcar numa viagem de descoberta e paixão com aDayinDouro. Fundada em 2011 pelo visionário Manuel Guimarães, um engenheiro informático de coração apaixonado, esta empresa familiar é muito mais do que uma empresa - é uma celebração de emoções e laços familiares.<br><br> Prove connosco o autêntico Vale do Douro para fazer parte da Experiência mais autêntica do Douro em 2019!';
 $language['FOOTER_SECTION_CONTACT'] = 'Contacte-nos!';
@@ -32,4 +34,28 @@ $language['ABOUT_TEXT_2'] = 'A história de Manuel e sua família ganhou vida qu
 $language['ABOUT_TEXT_3'] = 'Unidos pelo amor e paixão pelo Vale do Douro, Manuel, a sua família e a sua equipa apaixonada estão prontos para compartilhar a jornada mais emocionante de sua vida.<br><br> Junte-se a nós e deixe-se levar pela emoção enquanto descobrimos juntos a essência do Vale do Douro, uma experiência que vai tocar o seu coração e despertar os seus sentidos.  Bem-vindo ao aDayinDouro - onde a paixão, a descoberta e os laços familiares se encontram.';
 $language['TEAM_TITLE'] = 'Membros da família';
 $language['TEAM_TEXT'] = 'Conheça a nossa fantástica equipa.';
+
+$language['TOURS_TITLE'] = "Experiências";
+$language['TOURS_DESCRIPTION'] = "Aqui pode conferir as nossas diferentes opções de passeios vínicos. De acordo com o seu perfil, personalidade e orçamento, podemos proporcionar-lhe uma experiência de vida que nunca irá esquecer! Faça parte da nossa família inscrevendo-se para um tour de vinhos abaixo!";
+$language['TOUR_SIDE_TITLE'] = "Reserva já!";
+$language['TOUR_SIDE_SUBTITLE'] = "Escolhe uma data!";
+    //weekdays
+    $language['MONDAY'] = "Segunda-feira";
+    $language['TUESDAY'] = "Terça-feira";
+    $language['WEDNESDAY'] = "Quarta-feira";
+    $language['THURSDAY'] = "Quinta-feira";
+    $language['FRIDAY'] = "Sexta-feira";
+    $language['SATURDAY'] = "Sábado";
+    $language['SUNDAY'] = "Domingo";
+$language['TOUR_SIDE_AVAILABILITY'] = "Bilhetes disponíveis";
+$language['TOUR_SIDE_PEOPLE'] = "Pessoa";
+$language['TOUR_SIDE_BUTTON'] = "Escolher";
+
+$language['LOGIN_TITLE'] = "Iniciar Sessão";
+$language['LOGIN_EMAIL'] = "Email";
+$language['LOGIN_PASSWORD'] = "Palavra-passe";
+$language['LOGIN_RECOVER_PASSWORD'] = "Recuperar palavra-passe.";
+$language['LOGIN_REGISTER'] = "Não possui uma conta? Crie uma!";
+$language['LOGIN_BACK_BUTTON'] = "Voltar";
+$language['LOGIN_BUTTON'] = "Iniciar Sessão";
 ?>
