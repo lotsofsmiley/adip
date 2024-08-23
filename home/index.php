@@ -60,18 +60,31 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <div class="tours-row">
         <?php foreach ($tours as $tour) {
-            echo "
+            /*echo "
                 <div class='tours-img-col'>
                         <img class='tour-image' src='resources/_images/" . $tour['image'] . "'>
                         <h3 class='tour-title'>" . $tour['name'] . "</h3>
                         <p class='tour-description'>" . $tour['description'] . "</p>
                         <a href='./?p=21&id=" . $tour['id'] . "' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
-                    </div>";
+                    </div>";*/
+            echo "
+                <div class='tours-img-col'>
+                    <div class='tour-content'>
+                        <img class='tour-image' src='resources/_images/" . $tour['image'] . "'>
+                        <h3 class='tour-title'>" . $tour['name'] . "</h3>
+                        <p class='tour-description'>" . $tour['description'] . "</p>
+                        <div class='tour-links'>
+                            <a href='mailto:adayinporto@gmail.com' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
+                        </div>
+                    </div> 
+                </div>";
         } ?>
     </div>
 </section>
+<br>
+<br>
 
-<section class="pwc">
+<!--<section class="pwc">
     <div class="pwc-content-box">
         <div class="pwc-content">
             <h1 class="pwc-title"><?php echo $language['PWC_SECTION_TITLE'] ?></h1>
@@ -83,4 +96,4 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div>
     </div>
-</section>
+</section>-->

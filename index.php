@@ -51,6 +51,7 @@ if (isset($_SESSION['selected_language'])) {
 } elseif (!isset($_SESSION['selected_language'])) {
     $_SESSION['selected_language'] = '2';
 }
+echo $filename . '?v=' . $fileModified;
 ?>
 
 
@@ -62,7 +63,7 @@ if (isset($_SESSION['selected_language'])) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aDayinDouro</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo $filename;?>?v=<?php echo $fileModified ; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo $filename; ?>?v=<?php echo $fileModified; ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -202,9 +203,9 @@ if (isset($_SESSION['selected_language'])) {
                 (+351) 916 541 852
             </a>
 
-            <a class="footer-contact-mail" target="_blank" href="mailto:adayinporto@gmail.com">
+            <a class="footer-contact-mail" target="_blank" href="mailto:info@adayindouro.com">
                 <i class="footer-contact-icon fa fa-envelope"></i>
-                adayinporto@gmail.com
+                info@adayindouro.com
             </a>
         </div>
 

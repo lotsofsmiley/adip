@@ -324,7 +324,7 @@ nav .fa{
 .nav-language .dropdown {
     display: none;
     width: auto;
-    height: auto;
+    height: auto;          
     position: absolute;
     top: 100%;
     right: 0;
@@ -335,6 +335,7 @@ nav .fa{
     border-radius: 5%;
     flex-direction: column;
     align-items: flex-start;
+    list-style: none;
 }
 
 .nav-language .dropdown-responsive {
@@ -343,7 +344,8 @@ nav .fa{
     height: auto;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -20px;
+    left: -20px;
     z-index: 1;
     background-color: var(--dark-background-color);
     padding: 10px;
@@ -351,6 +353,7 @@ nav .fa{
     border-radius: 5%;
     flex-direction: column;
     align-items: flex-start;
+    list-style: none;
 }
 
 .show-languages {
@@ -449,7 +452,7 @@ nav .fa{
 
 
 /********************************************* Tours *********************************************/
-
+ 
 .tours{
     width: 85%;
     margin: auto;
@@ -459,7 +462,9 @@ nav .fa{
 
 .tours-row{
     margin-top: 5%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
     justify-content: space-between;
 }
 
@@ -479,14 +484,13 @@ nav .fa{
 }
 
 .tours-img-col{
-    flex-basis: 28%;
     border-radius: 10px;
-    position: relative;
     overflow: hidden;
     text-align: left;
     padding: 20px 12px;
     background: rgba(0,0,0,0.05);
     transition: 0.5s;
+    display: flex;
 }
 
 
@@ -494,6 +498,12 @@ nav .fa{
     width: 100%;
     border-radius: 10px;
     display: block;
+}
+
+.tour-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 40rem;
 }
 
 .tour-paragraph {
@@ -509,6 +519,13 @@ nav .fa{
 
 .tours-img-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.tour-links {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-top: 1rem;
 }
 
 .tour-buttonLink {
@@ -563,12 +580,11 @@ nav .fa{
 
 @media(max-width: 1000px){
     .tours-row{
-        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .tours-img-col{
         box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-        margin-bottom: 50px;
     }
     .pwc{
         margin-top: 50px!important;
