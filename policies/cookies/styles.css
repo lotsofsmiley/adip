@@ -1,0 +1,92 @@
+body {
+    background: #fff;
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-weight: 700;
+}
+
+.header {
+    color: #000;
+    padding: 16px 0;
+}
+
+.header .header-container {
+    position: relative;
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.content {
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+}
+
+.content .content-container {
+    position: relative;
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header-languages-option{
+    border-radius: 50%;
+    height: 2.5rem;
+    cursor: pointer;
+    max-width: 30px;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: inline-block;
+}
+
+.language-image {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: auto;
+    cursor: pointer;
+    max-width: 30px;
+    width: 100%;
+    max-height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}

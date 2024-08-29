@@ -22,6 +22,10 @@ $language['TOURS_SECTION_BUTTON_2'] = 'Reservar experiência';
 $language['FOOTER_SECTION_MAIN_TEXT'] = 'Prepare-se para embarcar numa viagem de descoberta e paixão com aDayinDouro. Fundada em 2011 pelo visionário Manuel Guimarães, um engenheiro informático de coração apaixonado, esta empresa familiar é muito mais do que uma empresa - é uma celebração de emoções e laços familiares.<br><br> Prove connosco o autêntico Vale do Douro para fazer parte da Experiência mais autêntica do Douro em 2019!';
 $language['FOOTER_SECTION_CONTACT'] = 'Contacte-nos!';
 $language['FOOTER_SECTION_SOCIAL'] = 'Visite as nossas redes sociais!';
+$language['FOOTER_SECTION_POLICIES'] = 'Ligações Utéis';
+$language['FOOTER_SECTION_POLICIES_COOKIES'] = 'Política de Cookies';
+$language['FOOTER_SECTION_RIGHTS'] = 'Todos os direitos reservados.';
+$language['FOOTER_SECTION_DEVELOPED'] = 'Desenvolvido por';
 
 $language['PWC_SECTION_TITLE'] = 'Portugal Wines Club';
 $language['PWC_SECTION_TEXT'] = 'Permite-nos conectá-lo com as famílias vinícolas do Vale do Douro, em Portugal.';
@@ -50,6 +54,8 @@ $language['TOUR_SIDE_SUBTITLE'] = "Escolhe uma data!";
 $language['TOUR_SIDE_AVAILABILITY'] = "Bilhetes disponíveis";
 $language['TOUR_SIDE_PEOPLE'] = "Pessoa";
 $language['TOUR_SIDE_BUTTON'] = "Escolher";
+
+
 
 $language['LOGIN_TITLE'] = "Iniciar Sessão";
 $language['LOGIN_EMAIL'] = "Email";

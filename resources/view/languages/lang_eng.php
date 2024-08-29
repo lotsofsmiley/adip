@@ -25,6 +25,10 @@ $language['PWC_SECTION_BUTTON'] = 'Join Us!!';
 $language['FOOTER_SECTION_MAIN_TEXT'] = "Prepare yourself to embark on a journey of discovery and passion with aDayinDouro. Founded in 2011 by the visionary Manuel Guimarães, a computer engineer with a passionate heart, this family-owned company is much more than just a business - it's a celebration of emotions and family ties. <br><br>Join us to experience the authentic Douro Valley and become part of the most authentic Douro Experience in 2019!";
 $language['FOOTER_SECTION_CONTACT'] = 'Contact us!';
 $language['FOOTER_SECTION_SOCIAL'] = 'Visit our social media!';
+$language['FOOTER_SECTION_POLICIES'] = 'Useful Links';
+$language['FOOTER_SECTION_POLICIES_COOKIES'] = 'Cookie Policy';
+$language['FOOTER_SECTION_RIGHTS'] = 'All Rights Reserved.';
+$language['FOOTER_SECTION_DEVELOPED'] = 'Developed by';
 
 $language['ABOUT_TITLE'] = 'About us';
 $language['ABOUT_TEXT'] = 'Know more about our story, who we are and the amazing people that compose our team!';
@@ -38,7 +42,7 @@ $language['TOURS_TITLE'] = "Experiences";
 $language['TOURS_DESCRIPTION'] = "Here you can check out our different wine tour options. According to your profile, personality, and budget, we can provide you with a life experience you will never forget! Become part of our family by signing up for a wine tour below!";
 $language['TOUR_SIDE_TITLE'] = "Book now!";
 $language['TOUR_SIDE_SUBTITLE'] = "Choose a date!";
-    //weekdays
+//weekdays
     $language['MONDAY'] = "Monday";
     $language['TUESDAY'] = "Tuesday";
     $language['WEDNESDAY'] = "Wednesday";

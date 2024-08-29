@@ -1,0 +1,14 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Ensure the .htaccess file is being read
+RewriteBase /
+
+# If the requested file does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect requests to the corresponding .php file
+RewriteRule ^([^/]+)$ $1.php [L]
+
+AddType image/jpeg .jpg

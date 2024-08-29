@@ -46,6 +46,7 @@ a {
     background-position: center;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 
 h1{
@@ -245,7 +246,7 @@ nav .fa{
     }
 }
 
-@media(max-width: 1199px){
+@media(max-width:1199px) {
 
     .nav-language {
         display:none;
@@ -260,13 +261,6 @@ nav .fa{
         color: var(--light-background-color);
         align-items: flex-end;
         flex-direction: row;
-    }
-
-    .text-box h1{
-        font-size: 25px;
-    }
-    .paragraph-description{
-        font-size: 16px;
     }
     .nav-links ul .menu-sub-item{
         display: block;
@@ -376,6 +370,28 @@ nav .fa{
 
 .nav-language .dropdown a {
     color: #ccc;
+}
+
+@media (max-width: 499px) {
+    .text-box h1{
+        font-size: 23px;
+    }
+    .paragraph-description{
+        font-size: 16px;
+    }
+    .text-box{
+        width: 85%;
+    }
+}
+
+@media(max-width: 1199px) and (min-width: 500px){
+
+    .text-box h1{
+        font-size: 25px;
+    }
+    .paragraph-description{
+        font-size: 16px;
+    }
 }
 
 
@@ -690,11 +706,18 @@ nav .fa{
 /********************************************* Footer *********************************************/
 
 .footer {
-    padding: 4.5rem 2rem;
+    padding: 4.5rem 2rem 0 2rem;
     background-color: var(--dark-background-color);
     color: var(--light-text-reverse-color);
     position: relative;
     height: auto;
+}
+
+.footer-copyright {
+    display: flex;
+    padding-block: 2rem;
+    background-color: var(--dark-background-color);
+    justify-content: center;
 }
 
 @media (min-width: 1200px) {
@@ -714,11 +737,10 @@ nav .fa{
         width: 300px;
     }
     .footer-about {
-        margin-top: 0;
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    .footer-policies,
+    .footer-policies-cookies,
     .footer-contact-phone,
     .footer-contact-mail {
         width: 20rem;
@@ -728,6 +750,10 @@ nav .fa{
 @media (max-width: 1199px) {
     .footer-column {
         margin: 2rem 1rem 2rem 1rem; 
+    }
+    .footer-policies {
+        margin: 2rem 1rem 0rem 1rem;
+        padding-bottom: 2rem;
     }
     .footer-about {
         margin-top: 0;
@@ -768,13 +794,24 @@ nav .fa{
     opacity: .90;
 }
 
-.footer-policies, .footer-contact-phone, .footer-contact-mail {
+.footer-policies-cookies, .footer-contact-phone, .footer-contact-mail, .footer-copyright-text {
     display: block;
     color: var(--light-text-reverse-color);
     font-weight: 400;
     text-decoration: none;
     opacity: .75;
 }
+
+.footer-copyright-text {
+    text-align: center; 
+    opacity: .5;
+}
+
+.footer-info{
+    margin: auto;
+    background-color: var(--dark-background-color);
+}
+
 
 .social-platform {
     text-decoration: none
@@ -785,11 +822,11 @@ nav .fa{
     height: 32px;
     color: #fff;
     font-size: 2rem!important;
-    opacity: .25
+    opacity: .25;
 }
 
 .social-platform-icon .fa {
-    text-align: center
+    text-align: center;
 }
 
 .fa {
@@ -806,7 +843,17 @@ nav .fa{
 
 
 .social-platform:hover .social-platform-icon {
-    opacity: .6125
+    opacity: .6125;
+}
+
+.footer-copyright-author {
+    color: var(--alt-contrast-color);
+    opacity: .50;
+    text-decoration: none;
+}
+
+.footer-copyright-author:hover {
+    opacity: .75;
 }
 
 .footer-contact-icon {

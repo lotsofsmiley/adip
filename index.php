@@ -1,14 +1,20 @@
 <?php
+session_start();
+
+header("Cache-Control: no-cache, must-revalidate");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $filename = './resources/css/styles.css';
 $fileModified = substr(md5(filemtime($filename)), 0, 6);
 
-session_start();
 $op = 0;
 if (isset($_GET['p']))
     $op = $_GET['p'];
 
 // Include database connection
-require('./assets/scripts/db/connect.php');
+require('./assets/scripts/db/connect_test.php');
 
 
 
@@ -50,8 +56,9 @@ if (isset($_SESSION['selected_language'])) {
     }
 } elseif (!isset($_SESSION['selected_language'])) {
     $_SESSION['selected_language'] = '2';
+    include($language_file_name);
 }
-echo $filename . '?v=' . $fileModified;
+
 ?>
 
 
@@ -63,6 +70,7 @@ echo $filename . '?v=' . $fileModified;
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aDayinDouro</title>
+    <link rel="icon" href="./resources/_images/adipicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="<?php echo $filename; ?>?v=<?php echo $fileModified; ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,38 +195,50 @@ echo $filename . '?v=' . $fileModified;
         ?>
     </section>
     <footer class="footer" id="contact">
-        <div class="footer-column footer-about">
-            <div class="logo-container">
-                <img src="./resources/_images/full_nobg_logo.png" alt="adip" class="logo-image noSelect">
+            <div class="footer-column footer-about">
+                <div class="logo-container">
+                    <img src="./resources/_images/full_nobg_logo.png" alt="adip" class="logo-image noSelect">
+                </div>
+                <div class="footer-description">
+                    <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
+                </div>
             </div>
-            <div class="footer-description">
-                <?php echo $language['FOOTER_SECTION_MAIN_TEXT'] ?>
+
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_CONTACT'] ?></h3>
+                <a class="footer-contact-phone" target="_blank" href="tel:+351 916 541 852">
+                    <i class="footer-contact-icon fa fa-phone"></i>
+                    (+351) 916 541 852
+                </a>
+
+                <a class="footer-contact-mail" target="_blank" href="mailto:info@adayindouro.com">
+                    <i class="footer-contact-icon fa fa-envelope"></i>
+                    info@adayindouro.com
+                </a>
             </div>
-        </div>
 
-        <div class="footer-column footer-contact">
-            <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_CONTACT'] ?></h3>
-            <a class="footer-contact-phone" target="_blank" href="tel:+351 916 541 852">
-                <i class="footer-contact-icon fa fa-phone"></i>
-                (+351) 916 541 852
-            </a>
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_SOCIAL'] ?></h3>
+                <?php foreach ($socials as $social) {
+                    echo "
+                    <a class='social-platform' target='_blank' href='" . $social['value'] . "'>
+                        <i class='" . $social['icon_class'] . "'></i>
+                    </a>";
+                } ?>
+            </div>
 
-            <a class="footer-contact-mail" target="_blank" href="mailto:info@adayindouro.com">
-                <i class="footer-contact-icon fa fa-envelope"></i>
-                info@adayindouro.com
-            </a>
-        </div>
-
-        <div class="footer-column footer-contact">
-            <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_SOCIAL'] ?></h3>
-            <?php foreach ($socials as $social) {
-                echo "
-                <a class='social-platform' target='_blank' href='" . $social['value'] . "'>
-                    <i class='" . $social['icon_class'] . "'></i>
-                </a>";
-            } ?>
-        </div>
+            <div class="footer-column footer-policies">
+                <h3 class="footer-title"><?php echo $language['FOOTER_SECTION_POLICIES'] ?></h3>
+                <a class="footer-policies-cookies" target="_blank" href="./policies/cookies/index.php">
+                    <?php echo $language['FOOTER_SECTION_POLICIES_COOKIES'] ?>
+                </a>
+            </div>
     </footer>
+    <div class="footer-copyright">
+        <div class="footer-copyright-text">
+            © 2024 aDayinDouro. <?php echo $language['FOOTER_SECTION_RIGHTS'] . " " . $language['FOOTER_SECTION_DEVELOPED'] . " <a class='footer-copyright-author' target='_blank' href='https://github.com/lotsofsmiley'>Filipe Guimarães</a>"?>
+        </div>
+    </div>
 
 
 
