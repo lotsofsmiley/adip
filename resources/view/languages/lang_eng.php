@@ -36,10 +36,13 @@ $language['ABOUT_TEXT_1'] = "Manuel and his family's passion for the Douro Valle
 $language['ABOUT_TEXT_2'] = "Manuel and his family's story came to life when, in 2019, they were honored with the prestigious 'Most Authentic Douro Airbnb Experience of 2019' award. This recognition was a seal of approval for the passion and dedication they put into each visit and reaffirmed that they were on the right path to creating unforgettable memories. With aDayinDouro, every day is filled with love, connection, and a touch of magic. It's a family business where emotions overflow in every interaction, and every customer becomes part of an ever-evolving story.";
 $language['ABOUT_TEXT_3'] = "United by love and passion for the Douro Valley, Manuel, his family, and their passionate team are ready to share the most exciting journey of your life.<br>Join us and let yourself be carried away by the excitement as we together discover the essence of the Douro Valley, an experience that will touch your heart and awaken your senses. Welcome to aDayinDouro - where passion, discovery, and family ties meet.";
 $language['TEAM_TITLE'] = "Family Members";
-$language['TEAM_TEXT'] = "Meet our fantastic team.";
+$language['TEAM_TEXT'] = "Meet our fantastic team of WSET-certified¹ specialists.";
+$language['ABOUT_WSET_EXPLAIN'] = "The WSET Wines certificate is a globally recognized qualification for wine education, covering wine production, tasting, and pairing. For more information, visit <a class='about-explain-link' href='https://www.wsetglobal.com/qualifications/?subject=Wine'>WSET Wine Global Qualifications.</a>";
 
-$language['TOURS_TITLE'] = "Experiences";
+$language['TOURS_TITLE'] = "Our Experiences";
 $language['TOURS_DESCRIPTION'] = "Here you can check out our different wine tour options. According to your profile, personality, and budget, we can provide you with a life experience you will never forget! Become part of our family by signing up for a wine tour below!";
+$language['TOUR_INFO_GROUP'] = "Groups";
+$language['TOUR_INFO_ENDING'] = "Ending around";
 $language['TOUR_SIDE_TITLE'] = "Book now!";
 $language['TOUR_SIDE_SUBTITLE'] = "Choose a date!";
 //weekdays
@@ -53,6 +56,21 @@ $language['TOUR_SIDE_SUBTITLE'] = "Choose a date!";
 $language['TOUR_SIDE_AVAILABILITY'] = "Tickets available";
 $language['TOUR_SIDE_PEOPLE'] = "Person";
 $language['TOUR_SIDE_BUTTON'] = "Choose";
+$language['TOUR_SIDE_AVAILABILITY'] = "Bilhetes disponíveis";
+$language['TOUR_SIDE_PEOPLE'] = "Pessoa";
+$language['TOUR_SIDE_BUTTON'] = "Escolher";
+$language['TOUR_EXTRA_TITLE'] = "About the Experience";
+$language['TOUR_EXTRA_ITINERARY'] = "Itinerary";
+$language['TOUR_EXTRA_HIGHLIGHT'] = "Highlights";
+$language['TOUR_EXTRA_DESCRIPTION'] = "Full Description";
+$language['TOUR_EXTRA_INCLUDES'] = "Includes";
+$language['TOUR_EXTRA_NOT_SUITABLE'] = "Not Suitable For";
+$language['TOUR_EXTRA_MEETING'] = "Meeting Point";
+$language['TOUR_EXTRA_IMPORTANT_INFO'] = "Important Information";
+$language['TOUR_EXTRA_BEFORE_INFO'] = "Know Before You Go";
+$language['TOUR_EXTRA_SHOULD_TAKE'] = "What to Bring";
+$language['TOUR_EXTRA_NOT_ALLOWED'] = "Not Allowed";
+
 
 $language['LOGIN_TITLE'] = "Login";
 $language['LOGIN_EMAIL'] = "Email";

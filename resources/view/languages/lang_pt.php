@@ -35,12 +35,15 @@ $language['ABOUT_TITLE'] = 'Sobre nós';
 $language['ABOUT_TEXT'] = 'Conhece a nossa história, quem nós somos e as pessoas maravilhosas que compõem a nossa equipa!';
 $language['ABOUT_TEXT_1'] = ' A paixão de Manuel e da sua família pelo Vale do Douro era uma chama acesa dentro deles. Cada canto, cada vinhedo, cada sabor continha uma história profunda e emocionalmente cativante. Foi assim que nasceu a ideia de oferecer passeios personalizados que fossem além de uma simples visita.<br><br> Cada passeio da aDayinDouro é uma imersão total nas maravilhas do Vale do Douro. Das pitorescas colinas cobertas de vinhedos às tradicionais vinícolas, cada paragem é uma oportunidade para se apaixonar pela rica história e cultura da região. Mas o verdadeiro encanto está nas pessoas - a família de Manuel, com os seus sorrisos calorosos e corações generosos, guia cada hóspede em uma jornada de conexões profundas e momentos tocantes, tornando-os parte da família.';
 $language['ABOUT_TEXT_2'] = 'A história de Manuel e sua família ganhou vida quando, em 2019, eles foram homenageados com o prestigioso prêmio "A experiência Airbnb no Douro mais autêntica de 2019". Este reconhecimento foi o selo de aprovação pela paixão e dedicação que colocam em cada visita e reafirmaram que estavam no caminho certo para criar memórias inesquecíveis. Com a aDayinDouro, todos os dias são repletos de amor, conexão e um toque de magia. É uma empresa familiar onde as emoções transbordam em cada interação e cada cliente se torna parte de uma história em constante evolução.';
-$language['ABOUT_TEXT_3'] = 'Unidos pelo amor e paixão pelo Vale do Douro, Manuel, a sua família e a sua equipa apaixonada estão prontos para compartilhar a jornada mais emocionante de sua vida.<br><br> Junte-se a nós e deixe-se levar pela emoção enquanto descobrimos juntos a essência do Vale do Douro, uma experiência que vai tocar o seu coração e despertar os seus sentidos.  Bem-vindo ao aDayinDouro - onde a paixão, a descoberta e os laços familiares se encontram.';
+$language['ABOUT_TEXT_3'] = 'Unidos pelo amor e paixão pelo Vale do Douro, Manuel, a sua família e a sua equipa apaixonada estão prontos para compartilhar a jornada mais emocionante de sua vida.<br><br>Junte-se a nós e deixe-se levar pela emoção enquanto descobrimos juntos a essência do Vale do Douro, uma experiência que vai tocar o seu coração e despertar os seus sentidos.  Bem-vindo ao aDayinDouro - onde a paixão, a descoberta e os laços familiares se encontram.';
 $language['TEAM_TITLE'] = 'Membros da família';
-$language['TEAM_TEXT'] = 'Conheça a nossa fantástica equipa.';
+$language['TEAM_TEXT'] = 'Conheça a nossa fantástica equipa especializada e certificada WSET¹.';
+$language['ABOUT_WSET_EXPLAIN'] = "O certificado de Vinhos WSET é uma qualificação reconhecida globalmente para a educação sobre vinhos, abrangendo a produção, degustação e harmonização de vinhos. Para mais informações, visite <a class='about-explain-link' href='https://www.wsetglobal.com/qualifications/?subject=Wine'>Qualificações de vinhos globais WSET</a>.";
 
-$language['TOURS_TITLE'] = "Experiências";
+$language['TOURS_TITLE'] = "As nossas Experiências";
 $language['TOURS_DESCRIPTION'] = "Aqui pode conferir as nossas diferentes opções de passeios vínicos. De acordo com o seu perfil, personalidade e orçamento, podemos proporcionar-lhe uma experiência de vida que nunca irá esquecer! Faça parte da nossa família inscrevendo-se para um tour de vinhos abaixo!";
+$language['TOUR_INFO_GROUP'] = "Grupos";
+$language['TOUR_INFO_ENDING'] = "Termina pelas";
 $language['TOUR_SIDE_TITLE'] = "Reserva já!";
 $language['TOUR_SIDE_SUBTITLE'] = "Escolhe uma data!";
     //weekdays
@@ -54,6 +57,17 @@ $language['TOUR_SIDE_SUBTITLE'] = "Escolhe uma data!";
 $language['TOUR_SIDE_AVAILABILITY'] = "Bilhetes disponíveis";
 $language['TOUR_SIDE_PEOPLE'] = "Pessoa";
 $language['TOUR_SIDE_BUTTON'] = "Escolher";
+$language['TOUR_EXTRA_TITLE'] = "Sobre a experiência";
+$language['TOUR_EXTRA_ITINERARY'] = "Itinerário";
+$language['TOUR_EXTRA_HIGHLIGHT'] = "Destaques";
+$language['TOUR_EXTRA_DESCRIPTION'] = "Descrição completa";
+$language['TOUR_EXTRA_INCLUDES'] = "Inclui";
+$language['TOUR_EXTRA_NOT_SUITABLE'] = "Não é adequado para";
+$language['TOUR_EXTRA_MEETING'] = "Ponto de encontro";
+$language['TOUR_EXTRA_IMPORTANT_INFO'] = "Informações importantes";
+$language['TOUR_EXTRA_BEFORE_INFO'] = "Saiba antes de ir";
+$language['TOUR_EXTRA_SHOULD_TAKE'] = "O que levar";
+$language['TOUR_EXTRA_NOT_ALLOWED'] = "Não é permitido";
 
 
 

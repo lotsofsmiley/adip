@@ -118,7 +118,7 @@ if (isset($_SESSION['selected_language'])) {
                 <li class="nav-items menu-sub-item"></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=0"><?php echo $language['NAV_HOME'] ?></a></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=1"><?php echo $language['NAV_ABOUT'] ?></a></li>
-                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_TOURS'] ?></a></li>
+                <li class="nav-items menu-sub-item hover"><a class="noSelect" href="./?p=2"><?php echo $language['NAV_TOURS'] ?></a></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#contact"><?php echo $language['NAV_CONTACT'] ?></a></li>
                 <li class="nav-items menu-sub-item"></li>
                 <li class="nav-items book-button"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_BOOK_BUTTON'] ?></a></li>

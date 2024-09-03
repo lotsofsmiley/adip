@@ -1,6 +1,6 @@
 <?php
     $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
-    $sql = "SELECT * FROM employees WHERE language = '$selected_language' and display = 1";
+    $sql = "SELECT * FROM employees WHERE language = '$selected_language' and display = 1 and disabled = 0";
     $result = mysqli_query($conn, $sql);
     
     if (!$result) {
@@ -17,10 +17,6 @@
 
 
 <section class="about-header">
-
-</section>
-
-<section>
     <div class="about-text-box">
         <h1><?php echo $language['ABOUT_TITLE'] ?></h1>
         <p class="paragraph-description"><?php echo $language['ABOUT_TEXT'] ?></p>
@@ -88,5 +84,9 @@
         </div>
         ";
         } ?>
+    </div>
+
+    <div class="about-explaining">
+        ¹: WSET -  <?php echo $language['ABOUT_WSET_EXPLAIN'];?>
     </div>
 </section>

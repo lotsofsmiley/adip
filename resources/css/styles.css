@@ -22,8 +22,8 @@ a {
 :root {
     --dark-background-color: #0f1316;
     --darkish-background-color: #151a1e;
-    --medium-background-color: #666;
-    --light-background-color: rgba(0, 0, 0, 0.05);
+    --medium-background-color: #666666;
+    --light-background-color: #2c2c2c;
 
     --gradient1: rgba(83, 142, 193, 1);
     --gradient2: rgba(96, 174, 247, 1);
@@ -32,10 +32,12 @@ a {
     --alt-contrast-color-hover: rgba(79, 128, 170, 1);
     --dark-text-color: var(--dark-background-color);
     --medium-text-color: var(--medium-background-color);
+    --light-text-color: var(--light-background-color);
     --lighter-text-reverse-color: var(--light-background-color);
     --light-text-reverse-color: #ddd;
     
-    --border-color: #777;
+    --border-primary: var(--medium-text-color);
+    --border-secondary: #dcdfe4;
 }
 
 .header {
@@ -564,7 +566,8 @@ nav .fa{
 }
         
 .tour-buttonLink:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    opacity: 0.95;
 }
 
 

@@ -5,7 +5,7 @@
 
 /****************************************************************** ALL TOURS ******************************************************************/
 
-.tour-header {
+.tours-header {
     min-height: 70vh;
     width: 100%;
     background-position: center;
@@ -14,23 +14,19 @@
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../resources/_images/porto3.jpg);
 }
 
-.tours-text-box {
+.tours-header-text-box {
     width: 75%;
     color: #fff;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.tours-text-box h1 {
-    font-size: 62px;
-}
-
-.tours-text-box p {
+.tours-header-text-box p {
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -41,15 +37,103 @@
     display: flex;
 }
 
-/****************************************************************** TOUR ******************************************************************/
-
-.tour-filter, .tour-tours {
-    padding: 10px;
-    display: block;
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 }
 
-.tour-filter {
-    flex: 30%;
+.tours-grid-object {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tours-grid-object:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.tours-image-container {
+    height: 28.75rem;
+    width: 50%;
+}
+
+.tours-image-object {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tours-content {
+    height: 28.75rem;
+    width: 50%;
+    background-color: var(--light-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tours-title{
+    margin-bottom: 1rem;
+    font-size: 22px;
+    color: var(--dark-text-color);
+    text-align: left;
+}
+
+.tours-title, .tours-description {
+    padding: 0 80px;
+    margin-bottom: 1rem
+}
+
+.tours-button {
+    border: none;
+    border-radius: .3125rem;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+    display: block;
+    padding: 14px 36px;
+    font-size: 13px;
+    background: var(--contrast-color);
+    position: relative;
+    margin: 0 80px;
+    width: fit-content;
+}
+
+.tours-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+@media (min-width: 62.001rem){
+    .tours-text-box h1 {
+        font-size: 62px;
+    }
+}
+
+@media (min-width: 36.001rem) and (max-width: 62.000rem) {
+    .about-employees-team{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 75.001rem){
+    .about-employees-team {
+        margin: 2rem auto;
+        width: 72rem;
+    }
+}
+
+
+/****************************************************************** TOUR - TOURS ******************************************************************/
+
+.tour-tours {
+    padding: 10px;
+    display: block;
 }
 
 .tour-tours {
@@ -100,6 +184,31 @@
     transition: 0.5s;
 }
 
+/****************************************************************** TOUR ******************************************************************/
+
+.tour-header {
+    min-height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../resources/_images/porto3.jpg);
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.tour-header-text-box{
+    max-width: 100%;
+    text-align: left;
+    margin: 2rem;
+}
+
+.tour-header-text-box h1 {
+    font-size: 18px;
+    color: #fff;
+}
+
 .tour-description{
     padding: 0!important;
     color: #777;
@@ -113,40 +222,7 @@
     text-decoration: none;
 }
 
-/*
-.tour-tours img {
-    height: 35%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    position: absolute;
-    width: 25%;
-}
-
-.tour-tours .tours-image {
-    position: relative;
-    width: 100%;
-}
-
-.tour-tours .tour-tour {
-    color: #666;
-    color: var(--medium-text-color);
-    text-align: center;
-}*/
-
-
-.tour-text-box{
-    width: 100%;
-    color: #fff;
-    position: absolute;
-    top: 85%;
-    left: 2%;
-    text-align: left;
-}
-
 .tour-info {
-    border-bottom: 1px solid var(--medium-text-color);
     padding: 2rem 0;
     display: flex;
     justify-content: center;
@@ -160,312 +236,84 @@
     list-style: none;
 }
 
-.tour-regular {
-    display: flex;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-    position: relative;
+.tour-main{
     margin: 2rem auto;
-    width: 72rem;
 }
 
-.tour-main {
-    margin-right: 2rem;
-    width: 50rem;
-}
-
-.tour-side {
-    width: 20rem;
-}
-
-.tour-side-info {
-    padding: 2rem 0;
-    text-align: center;
-}
-.tour-side-title {
-    padding-inline: 1.5rem;
-    font-size: 1.75rem;
-    color: var(--contrast-color);
-}
-.tour-side-subtitle {
-    font-size: 1rem;
-    color: var(--medium-text-color);
-}
-.tour-side-dates {
-    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 1rem;
-    display: flex;
-    margin-top: 10px;
-}
-.tour-side-dates-info{
-    width: 60%;
-}
-.tour-side-dates-action{
-    width: 40%;
-    text-align: right;
-}
-.info-time{
-    font-size: 0.875rem;
-}
-.info-tickets{
-    font-size: 0.875rem;
-}
-
-.tour-side-dates-action .action-button {
-    margin-top: 5px;
-    padding: 0.5rem 0.1rem;
-    background: var(--contrast-color);
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    width: 90%;
-    margin-left: 10%
-}
-.tour-side-dates-action a{
-    text-decoration: none;
-    align-items: right;
-    color: var(--light-text-color);
-}
-
-.tour-side-more {
-    margin-top: 2rem;
-    text-align: center;
-    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 1rem;
-    width: 70%;
-    margin-inline: auto;
-    border-style: solid;
-    border-width: 1px;
-    border-color: 1px var(--dark-background-color);
-}
-
-.tour-side a{
-    text-decoration: none;
-    color: black;
-}
-
-.tour-side-more:hover {
-    background-color: #f2f2f2;
-    transition: background-color 0.2s;
-}
-
-.tour-side input[type="date"]{
-    padding: 0.5rem 0.65rem;
-    color: var(--dark-text-color);
-    font-size: 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: 1px var(--dark-background-color);
-    outline: none;
-    border-radius:10px;
-}
-
-
-.introduction {
-    box-sizing: content-box;
+.tour-introduction {
+    border-top: 1px solid var(--medium-text-color);
     line-height: 1.25;
-    margin: 0 auto;
-    max-width: 65rem;
-    padding: 3.75rem 0; 
+    margin: auto;
+    max-width: 60%;
+    padding: 3.75rem 0;
     text-align: left;
-    width: auto;
 }
 
-.introduction-title {
-    color: var(--medium-text-color);
+.tour-introduction-title {
     margin-top: 1rem;
 }
 
-.introduction-body {
+.tour-introduction-body {
     color: var(--light-text-color);
     margin-top: 1rem;
 }
 
-/****************************************************************** CHECKOUT ******************************************************************/
-
-input,
-textarea,
-select {
-    margin-block: 10px;
-    padding: .5rem 1rem;
-    border-radius: 0.3125rem;
-    border: 1px solid #ccc;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    border: 1px solid #ccc;
-}
-
-th {
-    color: white;
-    background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 100%);
-    padding: 1.25rem 1rem;
-    text-align: left;
-    font-weight: normal;
-
-}
-
-td {
-    padding: 1rem 1rem .5rem;
-    font-size: 16px;
-    vertical-align: middle;
-    height: auto;
-    color: var(--checkout-light-text-color);
-    font-weight: 300;
-}
-
-input[type="number"] {
-    color: var(--checkout-light-text-color);
-    font-weight: 300;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.checkout-section {
-    display: flex;
-    width: 70rem;
-    margin-inline: auto;
-    margin-block: 4rem;
-}
-
-.checkout {
-    width: 75%;
-}
-
-
-.contact-info,
-.cart-info {
-    width: 25%;
-    margin-left: 2rem;
-    height: fit-content;
-}
-
-.checkout-total {
-    max-width: 16rem;
-    margin: 0 4rem 1rem auto;
-    padding-inline: 2rem;
-    margin-top: -2rem;
-}
-
-.total-row {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid var(--dark-text-color);
-    font-size: 15px;
-}
-
-.total-title {
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.total-row,
-.total-title {
-    padding-block: 1rem;
-}
-
-.checkout-table,
-.contact-info,
-.cart-info {
-    padding: 2rem;
-}
-
-.checkout,
-.contact-info,
-.cart-info {
-    border: 1px solid var(--light-text-reverse-color);
-}
-
-.contact-info-title, .cart-info-title {
-    font-size: 1.375rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    text-align: left;
-}
-
-.contact-info-text, .cart-info-tour {
-    color: var(--checkout-light-text-color);
-    font-weight: 300;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-}
-
-.contact-icon {
-    color: var(--checkout-light-text-color);
-    font-size: 1.125rem;
-    height: 1.125rem;
-    text-align: center;
-    width: 1.125rem;
-}
-
-.contact-info a {
-    color: var(--checkout-light-text-color);
-    font-weight: 300;
-    padding-left: 1rem;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-}
-
-.checkout a {
-    -webkit-text-decoration: none;
-    text-decoration: none;
-}
-
-.checkout-button {
-    width: 40%;
+.tour-extras {
     margin: auto;
-    margin-inline: 25% 25%;
-    text-align: center;
-    padding: 1rem 2rem;
-    background: var(--contrast-color);
-    box-shadow: 0 0 0 1px var(--light-text-reverse-color);
-    border-radius: 15px;
-    margin-block: 1rem;
-    color: white;
-    cursor: pointer;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
+    max-width: 60%;
 }
 
-.checkout-button.disabled {
-    opacity: 0.5;
-    pointer-events: none;
+.tour-extras h2{
+    margin-bottom: 1rem;
 }
 
-.insert-info {
-    padding: 2rem;
-    width: 40rem;
-    padding: 2rem;
-    margin: 5rem auto;
-    border: 1px solid var(--light-text-reverse-color);
+.tour-extra{
+    display: flex;
+    border-bottom: 1px solid var(--border-secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
-.insert-return-button {
-    width: 40%;
-    margin-inline: 0 25%;
-    text-align: center;
-    padding: 1rem 2rem;
-    background: var(--contrast-color);
-    box-shadow: 0 0 0 1px var(--light-text-reverse-color);
-    border-radius: 15px;
-    margin-block: 1rem;
-    color: white;
-    cursor: pointer;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    text-decoration: none;
+.tour-extra-title {
+    width: 30%;
 }
 
-.insert-info a {
-    text-decoration: none;
+.tour-extra-title h4 {
+    color: var(--alt-contrast-color);
 }
 
+.tour-extra-content {
+    width: 70%;
+    color: var(--light-text-color);
+}
+
+.tour-extra-content ul {
+    padding-left: 1.1rem;
+}
+
+.tour-extra-content li {
+    color: var(--light-text-color);
+}
+
+.tour-extra-text {
+    
+}
+
+@media (min-width: 62.001rem){
+    .tour-header-text-box h1 {
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 36.001rem) and (max-width: 62.000rem) {
+    .about-employees-team{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 75.001rem){
+    .about-employees-team {
+        margin: 2rem auto;
+        width: 72rem;
+    }
+}

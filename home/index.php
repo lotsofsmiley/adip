@@ -1,7 +1,7 @@
 <?php
 if (isset($selected_language)) {
     $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
-    $sql = "SELECT * FROM tour WHERE language = '$selected_language' limit 3";
+    $sql = "SELECT * FROM tour WHERE language = '$selected_language' and display = 1 and disabled = 0 order by id limit 3";
     $result = mysqli_query($conn, $sql);
 }
 
@@ -60,13 +60,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <div class="tours-row">
         <?php foreach ($tours as $tour) {
-            /*echo "
-                <div class='tours-img-col'>
-                        <img class='tour-image' src='resources/_images/" . $tour['image'] . "'>
-                        <h3 class='tour-title'>" . $tour['name'] . "</h3>
-                        <p class='tour-description'>" . $tour['description'] . "</p>
-                        <a href='./?p=21&id=" . $tour['id'] . "' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
-                    </div>";*/
             echo "
                 <div class='tours-img-col'>
                     <div class='tour-content'>
@@ -74,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <h3 class='tour-title'>" . $tour['name'] . "</h3>
                         <p class='tour-description'>" . $tour['description'] . "</p>
                         <div class='tour-links'>
-                            <a href='mailto:adayinporto@gmail.com' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
+                            <a href='./?p=21&id=" . $tour['id'] . "' class='tour-buttonLink'>" . $language['TOURS_SECTION_BUTTON_2'] . "</a>
                         </div>
                     </div> 
                 </div>";

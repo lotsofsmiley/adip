@@ -14,16 +14,15 @@
     width: 75%;
     color: #fff;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-
 .about-text-box p {
     margin: 10px 0 40px;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -90,6 +89,10 @@
 
 
 @media (min-width: 62.001rem){
+    .about-text-box h1 {
+        font-size: 62px;
+    }
+
     .about-employees-team {
         grid-template-columns: repeat(3,1fr);
     }
@@ -164,4 +167,19 @@
 .about-employees-card-info-text {
     font-weight: 300;
     font-size: 1rem;
+}
+
+.about-explaining {
+    padding: 1rem;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.about-explain-link {
+    text-decoration: none;
+    color: var(--alt-contrast-color);
+}
+
+.about-explain-link:hover {
+    opacity: .75;
 }
