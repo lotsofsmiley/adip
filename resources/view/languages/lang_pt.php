@@ -64,6 +64,7 @@ $language['TOUR_EXTRA_DESCRIPTION'] = "Descrição completa";
 $language['TOUR_EXTRA_INCLUDES'] = "Inclui";
 $language['TOUR_EXTRA_NOT_SUITABLE'] = "Não é adequado para";
 $language['TOUR_EXTRA_MEETING'] = "Ponto de encontro";
+$language['TOUR_EXTRA_MEETING_DESCRIPTION'] = "Abrir no Google Maps";
 $language['TOUR_EXTRA_IMPORTANT_INFO'] = "Informações importantes";
 $language['TOUR_EXTRA_BEFORE_INFO'] = "Saiba antes de ir";
 $language['TOUR_EXTRA_SHOULD_TAKE'] = "O que levar";

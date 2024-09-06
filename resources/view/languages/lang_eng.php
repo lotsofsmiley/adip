@@ -66,6 +66,7 @@ $language['TOUR_EXTRA_DESCRIPTION'] = "Full Description";
 $language['TOUR_EXTRA_INCLUDES'] = "Includes";
 $language['TOUR_EXTRA_NOT_SUITABLE'] = "Not Suitable For";
 $language['TOUR_EXTRA_MEETING'] = "Meeting Point";
+$language['TOUR_EXTRA_MEETING_DESCRIPTION'] = "Open in Google Maps";
 $language['TOUR_EXTRA_IMPORTANT_INFO'] = "Important Information";
 $language['TOUR_EXTRA_BEFORE_INFO'] = "Know Before You Go";
 $language['TOUR_EXTRA_SHOULD_TAKE'] = "What to Bring";

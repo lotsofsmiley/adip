@@ -2,7 +2,7 @@
 @import url(../../about/styles.css);
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 *{
@@ -23,14 +23,18 @@ a {
     --dark-background-color: #0f1316;
     --darkish-background-color: #151a1e;
     --medium-background-color: #666666;
-    --light-background-color: #2c2c2c;
+    --light-background-color: #e6e6e6;
+    
 
     --gradient1: rgba(83, 142, 193, 1);
     --gradient2: rgba(96, 174, 247, 1);
     --contrast-color: linear-gradient(121deg, rgba(83, 142, 193, 1) 0%, rgba(96, 174, 247, 1) 100%);;
     --alt-contrast-color: rgba(83, 142, 193, 1);
     --alt-contrast-color-hover: rgba(79, 128, 170, 1);
+    --label-success: #007850;
+    --label-critical: #c72a3d;
     --dark-text-color: var(--dark-background-color);
+    --medium-dark-text-color: #2c2c2c;
     --medium-text-color: var(--medium-background-color);
     --light-text-color: var(--light-background-color);
     --lighter-text-reverse-color: var(--light-background-color);
@@ -52,7 +56,7 @@ a {
 }
 
 h1{
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
 }
 
@@ -211,7 +215,6 @@ nav img{
 .header-button:hover{
     border: 1px solid var(--alt-contrast-color);
     background: var(--alt-contrast-color);
-    
 }
 
 nav .fa{
