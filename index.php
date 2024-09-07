@@ -56,6 +56,7 @@ if (isset($_SESSION['selected_language'])) {
     }
 } elseif (!isset($_SESSION['selected_language'])) {
     $_SESSION['selected_language'] = '2';
+    $selected_language = $_SESSION['selected_language'];
     include($language_file_name);
 }
 
